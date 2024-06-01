@@ -10,5 +10,6 @@ public class AplicationController {
 	public String goHome() {
 		
 	return "index";
-	}
+	}	
+	
 }

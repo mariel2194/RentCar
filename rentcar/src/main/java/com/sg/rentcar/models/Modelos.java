@@ -1,7 +1,7 @@
 package com.sg.rentcar.models;
 
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
+
+import org.antlr.v4.runtime.misc.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -13,7 +13,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,20 +26,20 @@ public class Modelos {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="modeloId")
-	private int modeloId;
+	@Column(name="modeloId" , nullable = false, insertable = false, updatable = false) // 
+    @NotNull // Add @NotNull annotation)
+	public int modeloId;
 	
 	@Column
-	private String descripcion;
-	@Column
-	private boolean activo;	
+	public String descripcion;
+	
+	@Column(columnDefinition = "BIT", nullable = false)
+	public boolean activo;	
 	
 	@ManyToOne
 	@JoinColumn(name="marcaId", insertable=false, updatable=false)
 	private Marcas marca;
-	private Integer marcaId;	
-	
-	
+	public Integer marcaId;
 	
 	
 }

@@ -67,6 +67,16 @@ h6 {
   color: #012970;
 }
 
+.actionBtns{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 100%; /* Or whatever width you want */
+  height: 100vh; 
+	
+}
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/

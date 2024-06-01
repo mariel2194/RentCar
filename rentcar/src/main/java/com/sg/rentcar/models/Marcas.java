@@ -3,6 +3,9 @@ package com.sg.rentcar.models;
 
 
 import java.util.List;
+
+import org.antlr.v4.runtime.misc.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
@@ -27,25 +30,25 @@ public class Marcas {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="marcaId")
-	private int marcaId;
+	@Column(name="marcaId" , nullable = false, insertable = false, updatable = false) // 
+    @NotNull
+	public int marcaId;
 	
 	@Column
-	private String descripcion;
+	public String descripcion;
 	
 	@Column
-	private boolean activo;
-	
+	public boolean activo;	
 	
 	@ManyToOne
-	@JoinColumn(name="tipoVehiculoId", insertable=false, updatable=false)
-	private TipoVehiculos tipoVehiculo;
-	private Integer tipoVehiculoId;	
+	@JoinColumn(name="tipoVehiculoId")
+	public TipoVehiculos tipoVehiculo;	
 	
 	
 	@OneToMany
-	@JoinColumn(name="modeloId", insertable=false, updatable=false)
+	@JoinColumn(name="modeloId", insertable=true, updatable=true)
 	private List<Modelos> modelo;
+	public Integer modeloId;
 	
 	
 }

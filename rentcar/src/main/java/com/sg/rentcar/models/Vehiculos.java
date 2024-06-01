@@ -1,6 +1,8 @@
 package com.sg.rentcar.models;
 
 import java.util.Date;
+
+import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
@@ -26,26 +28,27 @@ public class Vehiculos {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id")
-	private int vehiculoId;
+	@Column(name="id" , nullable = false, insertable = false, updatable = false) // 
+    @NotNull // Add @NotNull annotation)
+	public int vehiculoId;
 	
 	@Column(length=20)
-	private String desripcion;
+	public String descripcion;
 	
 	@Column(length=20)
-	private String noChasis;
+	public String noChasis;
 	
 	@Column(length=20)
-	private String noMotor;
+	public String noMotor;
 	
 	@Column(length=20)
-	private String placa;	
+	public String placa;	
 	
 	
 	@ManyToOne
 	@JoinColumn(name="tipoVehiculoId", insertable=false, updatable=false)
 	private TipoVehiculos tipoVehiculo;
-	private Integer tipoVehiculoId;	
+	public Integer tipoVehiculoId;	
 	
 	
 }
