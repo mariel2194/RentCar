@@ -7,20 +7,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.sg.rentcar.models.Empleados;
-import com.sg.rentcar.services.EmpleadosService;
+import com.sg.rentcar.models.Rentas;
+import com.sg.rentcar.services.RentasService;
 
 @Controller 
-public class EmpleadosController {
+public class RentasController {
 	@Autowired
-	private EmpleadosService EmpleadosService;
+	private RentasService RentasService;
 
-	@GetMapping("/empleados")
+	@GetMapping("/rentas")
 	public String goRentas(Model model) {
 		
-		List<Empleados>rentasList = EmpleadosService.getEmpleados();
-		model.addAttribute("empleados", rentasList);
+		List<Rentas>rentasList = RentasService.getRentas();
+		model.addAttribute("rentas", rentasList);
 		
-	    return "empleados"; 
+	    return "rentas"; 
 	}
+
 }

@@ -25,25 +25,25 @@ public class Empleados {
 	
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int empleadoId;
+	    public int empleadoId;
 
 	    @Column
-	    private String nombre;
+	    public String nombre;
 
 	    @Column
-	    private String cedula;
+	    public String cedula;
 
 	    @Column
-	    private String tandaLabor;
+	    public String tandaLabor;
 
 	    @Column
-	    private double porcientoComision;
+	    public double porcientoComision;
 
 	    @Column
-	    private Date fechaIngreso;
+	    public Date fechaIngreso;
 
 	    @Column
-	    private boolean activo;
+	    public boolean activo;
 	
 	
 	

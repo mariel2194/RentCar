@@ -27,28 +27,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Marcas {
-	
-	@Id
+    
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="marcaId" , nullable = false, insertable = false, updatable = false) // 
-    @NotNull
-	public int marcaId;
-	
-	@Column
-	public String descripcion;
-	
-	@Column
-	public boolean activo;	
-	
-	@ManyToOne
-	@JoinColumn(name="tipoVehiculoId")
-	public TipoVehiculos tipoVehiculo;	
-	
-	
-	@OneToMany
-	@JoinColumn(name="modeloId", insertable=true, updatable=true)
-	private List<Modelos> modelo;
-	public Integer modeloId;
-	
-	
+    @Column(name="marcaId", nullable = false, insertable = false)
+    public int marcaId;
+    
+    @Column
+    public String descripcion;
+    
+    @Column(columnDefinition = "BIT", nullable = false)
+    public boolean activo;    
+    
+    @ManyToOne
+    @JoinColumn(name="tipoVehiculoId")
+    public TipoVehiculos tipoVehiculo;    
+    
+    @OneToMany(mappedBy = "marca")
+    private List<Modelos> modelos; // Adjusted mappedBy attribute
+    
 }

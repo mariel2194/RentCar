@@ -29,11 +29,11 @@ public class TipoCombustibles {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="tipoCombustibleId")
-	private int tipoCombustibleId;
+	public  int tipoCombustibleId;
 	@Column
-	private String descripcion;
+	public String descripcion;
 	@Column
-	private boolean activo;	
+	public boolean activo;	
 	
 	
 	

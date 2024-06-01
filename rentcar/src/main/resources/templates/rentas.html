@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>RentCar</title>
+	<title>Rent Car App</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -48,7 +48,7 @@
 		<div class="d-flex align-items-center justify-content-between">
 			<a href="index.html" class="logo d-flex align-items-center">
 				<img src="assets/img/logo.png" alt="">
-				<span class="d-none d-lg-block">NiceAdmin</span>
+				<span class="d-none d-lg-block">RentCar</span>
 			</a>
 			<i class="bi bi-list toggle-sidebar-btn"></i>
 		</div><!-- End Logo -->
@@ -272,8 +272,6 @@
 	</header><!-- End Header -->
 
 	<!-- ======= Sidebar ======= -->
-
-
 	<aside id="sidebar" class="sidebar">
 
 		<ul class="sidebar-nav" id="sidebar-nav">
@@ -319,6 +317,7 @@
 
 				</ul>
 			</li><!-- End Components Nav -->
+
 			<li class="nav-item">
 				<a class="nav-link collapsed" data-bs-target="#rentas-nav" data-bs-toggle="collapse" href="#">
 					<i class="bi bi-menu-button-wide"></i><span>Rentas</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -333,7 +332,6 @@
 
 				</ul>
 			</li><!-- End Components Nav -->
-
 			<li class="nav-item">
 				<a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
 					<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
@@ -397,7 +395,8 @@
 	<main id="main" class="main">
 
 		<div class="pagetitle">
-			<h1>Tipo de Vehiculos</h1>
+			<h1>Rentas</h1>
+
 			<div>
 				<button type="button" class="btn btn-primary btn-sm"
 					style="position: absolute; top: 85px; left: 90em;">Crear Nuevo</button>
@@ -407,7 +406,7 @@
 			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-					<li class="breadcrumb-item">Tipo de Vehiculos</li>
+					<li class="breadcrumb-item">Rentas</li>
 				</ol>
 			</nav>
 		</div><!-- End Page Title -->
@@ -418,7 +417,12 @@
 
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Tipo de Vehiculos</h5>
+
+
+
+
+
+							<h5 class="card-title">Rentas</h5>
 
 							<!-- Table with stripped rows -->
 							<table class="table datatable">
@@ -428,16 +432,16 @@
 											<b>Descripcion</b>
 										</th>
 										<th>Activo</th>
-										<th>MarcaId</th>
-										<th>Acciones</th>
 
+
+										<th>Acciones</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="tipoVehiculo:${tipoVehiculos}">
-										<td th:text="${tipoVehiculo.descripcion}"></td>
-										<td th:text="${tipoVehiculo.activo}"></td>
-										<td th:text="${tipoVehiculo.marcaId}"></td>
+									<tr th:each="renta:${rentas}">
+										<td th:text="${renta.descripcion}"></td>
+										<td th:text="${renta.activo}"></td>
+
 										<td>
 											<div class="btn-group" role="group" aria-label="Third group">
 												<button type="button" class="btn btn-secondary"><i
@@ -446,6 +450,10 @@
 												<button type="button" class="btn btn-secondary"><i
 														class="bi bi-trash-fill"></i></button>
 										</td>
+									</tr>
+
+
+
 								</tbody>
 							</table>
 							<!-- End Table with stripped rows -->
@@ -460,11 +468,6 @@
 	</main><!-- End #main -->
 
 
-	<!-- All the links in the footer should remain intact. -->
-	<!-- You can delete the links only if you purchased the pro version. -->
-	<!-- Licensing information: https://bootstrapmade.com/license/ -->
-	<!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-	Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 	</div>
 	</footer><!-- End Footer -->
 

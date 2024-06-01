@@ -36,10 +36,10 @@ public class Modelos {
 	@Column(columnDefinition = "BIT", nullable = false)
 	public boolean activo;	
 	
-	@ManyToOne
-	@JoinColumn(name="marcaId", insertable=false, updatable=false)
-	private Marcas marca;
-	public Integer marcaId;
+	 @ManyToOne
+     @JoinColumn(name="marcaId", insertable=false, updatable=false)
+     private Marcas marca;
+	
 	
 	
 }
