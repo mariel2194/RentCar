@@ -26,51 +26,51 @@ import lombok.NoArgsConstructor;
 public class Inspecciones {
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int id;
+	    public int id;
 
 	    @ManyToOne
 	    @JoinColumn(name="vehiculoId")
-	    private Vehiculos vehiculo;
+	    public Vehiculos vehiculo;
 
 	    @ManyToOne
 	    @JoinColumn(name="clienteId")
-	    private Clientes cliente;
+	    public Clientes cliente;
 
 	    @Column
-	    private boolean defectuoso;
+	    public boolean defectuoso;
 
 	    @Column
-	    private double cantidadCombustible;
+	    public double cantidadCombustible;
 
 	    @Column
-	    private boolean gomaRepuesto;
+	    public boolean gomaRepuesto;
 
 	    @Column
-	    private boolean gato;
+	    public boolean gato;
 
 	    @Column
-	    private boolean roturasCristal;
+	    public boolean roturasCristal;
 
 	    @Column
-	    private boolean estadoGoma1;
+	    public boolean estadoGoma1;
 
 	    @Column
-	    private boolean estadoGoma2;
+	    public boolean estadoGoma2;
 
 	    @Column
-	    private boolean estadoGoma3;
+	    public boolean estadoGoma3;
 
 	    @Column
-	    private boolean estadoGoma4;
+	    public boolean estadoGoma4;
 
 	    @Column
-	    private Date fecha;
+	    public Date fecha;
 
 	    @ManyToOne
 	    @JoinColumn(name="empleadoId")
-	    private Empleados empleado;	   
+	    public Empleados empleado;	   
 
 	    @Column
-	    private boolean estado;
+	    public boolean estado;
 }
 

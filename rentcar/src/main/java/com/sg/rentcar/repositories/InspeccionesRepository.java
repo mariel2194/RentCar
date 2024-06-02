@@ -3,9 +3,9 @@ package com.sg.rentcar.repositories;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.sg.rentcar.models.Empleados;
+import com.sg.rentcar.models.Inspecciones;
 
 @Repository
-public interface InspeccionesRepository extends JpaRepository<Empleados, Integer> {
+public interface InspeccionesRepository extends JpaRepository<Inspecciones, Integer> {
 
 }

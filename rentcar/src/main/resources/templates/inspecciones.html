@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>RentCar</title>
+	<title>Rent Car App</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -333,7 +333,7 @@
 				</ul>
 			</li><!-- End Components Nav -->
 			<li class="nav-item">
-				<a class="nav-link collapsed" th:href="@{/inspecciones}">
+				<a class="nav-link collapsed"  th:href="@{/inspecciones}">
 					<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
 						class="bi bi-chevron-down ms-auto"></i>
 				</a>
@@ -367,8 +367,9 @@
 				<a class="nav-link collapsed" th:href="@{/empleados}">
 					<i class="bi bi-gem"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
 				</a>
+				
 
-			</li><!-- End Icons Nav -->
+			</li><!-- Empleados Nav -->
 
 			<li class="nav-heading">Admin</li>
 
@@ -395,7 +396,7 @@
 	<main id="main" class="main">
 
 		<div class="pagetitle">
-			<h1>Vehiculos</h1>
+			<h1>Empleados</h1>
 
 			<div>
 				<button type="button" class="btn btn-primary btn-sm"
@@ -406,7 +407,7 @@
 			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-					<li class="breadcrumb-item">Vehiculos</li>
+					<li class="breadcrumb-item">Empleados</li>
 				</ol>
 			</nav>
 		</div><!-- End Page Title -->
@@ -422,29 +423,35 @@
 
 
 
-							<h5 class="card-title">Vehiculos</h5>
+							<h5 class="card-title">Empleados</h5>
 
 							<!-- Table with stripped rows -->
 							<table class="table datatable">
 								<thead>
 									<tr>
 										<th>
-											<b>Descripcion</b>
+											<b>Nombre</b>
 										</th>
-										<th>Placa</th>
-										<th>No. Chasis</th>
-										<th>No. Motor</th>
-										<th>Tipo</th>
+										<th>Cedula </th>
+										<th>Tanda Laboral</th>
+										<th>Porciento de Comision</th>
+										<th>Fecha de Ingreso</th>
+										<th>Activo</th>
+
+
 										<th>Acciones</th>
 									</tr>
 								</thead>
 								<tbody>
-									<tr th:each="vehiculo:${vehiculos}">
-										<td th:text="${vehiculo.descripcion}"></td>
-										<td th:text="${vehiculo.placa}"></td>
-										<td th:text="${vehiculo.noChasis}"></td>
-										<td th:text="${vehiculo.noMotor}"></td>
-										<td th:text="${vehiculo.tipoVehiculoId}"></td>
+									<tr th:each="empleado:${empleados}">
+										<td th:text="${empleado.nombre}"></td>
+										<td th:text="${empleado.cedula}"></td>
+										<td th:text="${empleado.tandaLabor}"></td>
+										<td th:text="${empleado.porcientoComision}"></td>
+										<td th:text="${#dates.format(empleado.fechaIngreso, 'dd/MM/yyyy')}"></td>
+										<td th:text="${empleado.activo}"></td>
+
+
 										<td>
 											<div class="btn-group" role="group" aria-label="Third group">
 												<button type="button" class="btn btn-secondary"><i
