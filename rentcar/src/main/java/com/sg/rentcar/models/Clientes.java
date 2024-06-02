@@ -27,25 +27,25 @@ public class Clientes {
 	
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int clienteId;
+	    public int clienteId;
 
 	    @Column
-	    private String nombre;
+	    public String nombre;
 
 	    @Column
-	    private String cedula;
+	    public String cedula;
 
 	    @Column
-	    private String noTarjeta;
+	    public String noTarjeta;
 
 	    @Column
-	    private double limiteCredito;
+	    public double limiteCredito;
 
 	    @Column
-	    private String tipoPersona;
+	    public String tipoPersona;
 
 	    @Column
-	    private boolean activo;
+	    public boolean activo;
 	
 }
 

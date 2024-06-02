@@ -13,12 +13,12 @@ import com.sg.rentcar.services.InspeccionesService;
 @Controller 
 public class InspeccionesController {
 	@Autowired
-	private InspeccionesService inspeccionessService;
+	private InspeccionesService inspeccionesService;
 
 	@GetMapping("/inspecciones")
-	public String goRentas(Model model) {
+	public String goInspecciones(Model model) {
 		
-		List<Inspecciones>inspeccionesList = InspeccionesService.getInspecciones();
+		List<Inspecciones>inspeccionesList = inspeccionesService.getInspecciones();
 		model.addAttribute("inspecciones", inspeccionesList);
 		
 	    return "inspecciones"; 

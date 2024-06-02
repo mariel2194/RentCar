@@ -28,8 +28,6 @@ public class Vehiculos {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id" , nullable = false, insertable = false, updatable = false) // 
-    @NotNull // Add @NotNull annotation)
 	public int vehiculoId;
 	
 	@Column(length=20)
