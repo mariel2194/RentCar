@@ -274,125 +274,126 @@
 	<!-- ======= Sidebar ======= -->
 
 
-	<aside id="sidebar" class="sidebar">
+	<!-- ======= Sidebar ======= -->
+		<aside id="sidebar" class="sidebar">
 
-		<ul class="sidebar-nav" id="sidebar-nav">
+			<ul class="sidebar-nav" id="sidebar-nav">
 
-			<li class="nav-item">
-				<a class="nav-link" th:href="@{/index}">
-					<i class="bi bi-grid"></i>
-					<span>Dashboard</span>
-				</a>
-			</li><!-- End Dashboard Nav -->
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/index}">
+						<i class="bi bi-grid"></i>
+						<span>Dashboard</span>
+					</a>
+				</li><!-- End Dashboard Nav -->
 
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-menu-button-wide"></i><span>Vehiculos</span><i
-						class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a th:href="@{/vehiculos}">
-							<i class="bi bi-circle"></i><span>Vehiculos</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/tipoVehiculos}">
-							<i class="bi bi-circle"></i><span>Tipos de Vehiculos</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/marcas}">
-							<i class="bi bi-circle"></i><span>Marca</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/modelos}">
-							<i class="bi bi-circle"></i><span>Modelo</span>
-						</a>
-					</li>
-					<li> <a th:href="@{/combustibles}">
-							<i class="bi bi-circle"></i><span>Combustibles</span>
-						</a>
-					</li>
-
-
-				</ul>
-			</li><!-- End Components Nav -->
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#rentas-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-menu-button-wide"></i><span>Rentas</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="rentas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a th:href="@{/rentas}">
-							<i class="bi bi-circle"></i><span>Rentas recientes</span>
-						</a>
-					</li>
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-menu-button-wide"></i><span>Vehiculos</span><i
+							class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a th:href="@{/vehiculos}">
+								<i class="bi bi-circle"></i><span>Vehiculos</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/tipoVehiculos}">
+								<i class="bi bi-circle"></i><span>Tipos de Vehiculos</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/marcas}">
+								<i class="bi bi-circle"></i><span>Marca</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/modelos}">
+								<i class="bi bi-circle"></i><span>Modelo</span>
+							</a>
+						</li>
+						<li> <a th:href="@{/combustibles}">
+								<i class="bi bi-circle"></i><span>Combustibles</span>
+							</a>
+						</li>
 
 
-				</ul>
-			</li><!-- End Components Nav -->
+					</ul>
+				</li><!-- End Components Nav -->
 
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
-						class="bi bi-chevron-down ms-auto"></i>
-				</a>
-
-			</li><!-- End Tables Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-bar-chart"></i><span>Reportes</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a href="charts-chartjs.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-					<li>
-						<a href="charts-apexcharts.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-					<li>
-						<a href="charts-echarts.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-				</ul>
-			</li><!-- End Charts Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-gem"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-
-			</li><!-- End Icons Nav -->
-
-			<li class="nav-heading">Admin</li>
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" th:href="@{/usuarios}">
-					<i class="bi bi-person"></i>
-					<span>Usuario</span>
-				</a>
-			</li><!-- End Profile Page Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" href="pages-faq.html">
-					<i class="bi bi-question-circle"></i>
-					<span>Configuracion</span>
-				</a>
-			</li><!-- End F.A.Q Page Nav -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#rentas-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-menu-button-wide"></i><span>Rentas</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="rentas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a th:href="@{/rentas}">
+								<i class="bi bi-circle"></i><span>Rentas recientes</span>
+							</a>
+						</li>
 
 
+					</ul>
+				</li><!-- End Components Nav -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/inspecciones}">
+						<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
+							class="bi bi-chevron-down ms-auto"></i>
+					</a>
 
-		</ul>
+				</li><!-- End Tables Nav -->
 
-	</aside><!-- End Sidebar-->
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-bar-chart"></i><span>Reportes</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a href="charts-chartjs.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+						<li>
+							<a href="charts-apexcharts.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+						<li>
+							<a href="charts-echarts.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+					</ul>
+				</li><!-- End Charts Nav -->
+
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/empleados}">
+						<i class="bi bi-gem"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+
+				</li><!-- End Icons Nav -->
+
+				<li class="nav-heading">Admin</li>
+
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/usuarios}">
+						<i class="bi bi-person"></i>
+						<span>Usuario</span>
+					</a>
+				</li><!-- End Profile Page Nav -->
+
+				<li class="nav-item">
+					<a class="nav-link collapsed" href="pages-faq.html">
+						<i class="bi bi-question-circle"></i>
+						<span>Configuracion</span>
+					</a>
+				</li><!-- End F.A.Q Page Nav -->
+
+
+
+			</ul>
+
+		</aside><!-- End Sidebar-->
 
 	<main id="main" class="main">
 

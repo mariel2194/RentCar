@@ -416,12 +416,8 @@
 			<div class="row">
 				<div class="col-lg-12">
 
-					<div class="card"  style="width: 76em;">
+					<div class="card" style="width: 114em;">
 						<div class="card-body">
-
-
-
-
 
 							<h5 class="card-title">Inspecciones</h5>
 
@@ -451,26 +447,30 @@
 								</thead>
 								<tbody>
 									<tr th:each="inspeccion:${inspecciones}">
-										<td th:if="${inspeccion.vehiculo != null}" th:text="${inspeccion.vehiculo.placa}"></td>
+										<td th:if="${inspeccion.vehiculo != null}"
+											th:text="${inspeccion.vehiculo.placa}"></td>
 										<td th:if="${inspeccion.vehiculo == null}">N/A</td>
 
-										       <td th:if="${inspeccion.cliente != null}" th:text="${inspeccion.cliente.nombre}"></td>
-											   <td th:if="${inspeccion.cliente.nombre == null }">N/A</td>
+										<td th:if="${inspeccion.cliente != null}"
+											th:text="${inspeccion.cliente.nombre}"></td>
+										<td th:if="${inspeccion.cliente.nombre == null }">N/A</td>
 
-										       <td th:text="${inspeccion.defectuoso}"></td>
-										       <td th:text="${inspeccion.cantidadCombustible}"></td>
-										       <td th:text="${inspeccion.gomaRepuesto}"></td>
-										       <td th:text="${inspeccion.gato}"></td>
-										       <td th:text="${inspeccion.roturasCristal}"></td>
-										       <td th:text="${inspeccion.estadoGoma1}"></td>
-											   <td th:text="${inspeccion.estadoGoma2}"></td>
-											   <td th:text="${inspeccion.estadoGoma3}"></td>
-											   <td th:text="${inspeccion.estadoGoma4}"></td>
-											   <td th:text="${inspeccion.fecha}"></td>
-											   <td th:if="${inspeccion.empleado != null}" th:text="${inspeccion.empleado.nombre}"></td>
-											   <td th:if="${inspeccion.empleado.nombre == null }">N/A</td>
-								   									      
-											   <td th:text="${inspeccion.estado}"></td>
+										<td th:text="${inspeccion.defectuoso}"></td>
+										<td th:text="${inspeccion.cantidadCombustible}"></td>
+										<td th:text="${inspeccion.gomaRepuesto}"></td>
+										<td th:text="${inspeccion.gato}"></td>
+										<td th:text="${inspeccion.roturasCristal}"></td>
+										<td th:text="${inspeccion.estadoGoma1}"></td>
+										<td th:text="${inspeccion.estadoGoma2}"></td>
+										<td th:text="${inspeccion.estadoGoma3}"></td>
+										<td th:text="${inspeccion.estadoGoma4}"></td>
+										
+										<td th:text="${#dates.format(inspeccion.fecha, 'dd/MM/yyyy')}"></td>
+										<td th:if="${inspeccion.empleado != null}"
+											th:text="${inspeccion.empleado.nombre}"></td>
+										<td th:if="${inspeccion.empleado.nombre == null }">N/A</td>
+
+										<td th:text="${inspeccion.estado}"></td>
 
 
 										<td>

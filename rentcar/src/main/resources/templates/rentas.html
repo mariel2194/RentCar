@@ -272,126 +272,125 @@
 	</header><!-- End Header -->
 
 	<!-- ======= Sidebar ======= -->
-	<aside id="sidebar" class="sidebar">
+		<aside id="sidebar" class="sidebar">
 
-		<ul class="sidebar-nav" id="sidebar-nav">
+			<ul class="sidebar-nav" id="sidebar-nav">
 
-			<li class="nav-item">
-				<a class="nav-link" th:href="@{/index}">
-					<i class="bi bi-grid"></i>
-					<span>Dashboard</span>
-				</a>
-			</li><!-- End Dashboard Nav -->
+				<li class="nav-item">
+					<a class="nav-link" th:href="@{/index}">
+						<i class="bi bi-grid"></i>
+						<span>Dashboard</span>
+					</a>
+				</li><!-- End Dashboard Nav -->
 
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-menu-button-wide"></i><span>Vehiculos</span><i
-						class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a th:href="@{/vehiculos}">
-							<i class="bi bi-circle"></i><span>Vehiculos</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/tipoVehiculos}">
-							<i class="bi bi-circle"></i><span>Tipos de Vehiculos</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/marcas}">
-							<i class="bi bi-circle"></i><span>Marca</span>
-						</a>
-					</li>
-					<li>
-						<a th:href="@{/modelos}">
-							<i class="bi bi-circle"></i><span>Modelo</span>
-						</a>
-					</li>
-					<li> <a th:href="@{/combustibles}">
-							<i class="bi bi-circle"></i><span>Combustibles</span>
-						</a>
-					</li>
-
-
-				</ul>
-			</li><!-- End Components Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#rentas-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-menu-button-wide"></i><span>Rentas</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="rentas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a th:href="@{/rentas}">
-							<i class="bi bi-circle"></i><span>Rentas recientes</span>
-						</a>
-					</li>
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-menu-button-wide"></i><span>Vehiculos</span><i
+							class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a th:href="@{/vehiculos}">
+								<i class="bi bi-circle"></i><span>Vehiculos</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/tipoVehiculos}">
+								<i class="bi bi-circle"></i><span>Tipos de Vehiculos</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/marcas}">
+								<i class="bi bi-circle"></i><span>Marca</span>
+							</a>
+						</li>
+						<li>
+							<a th:href="@{/modelos}">
+								<i class="bi bi-circle"></i><span>Modelo</span>
+							</a>
+						</li>
+						<li> <a th:href="@{/combustibles}">
+								<i class="bi bi-circle"></i><span>Combustibles</span>
+							</a>
+						</li>
 
 
-				</ul>
-			</li><!-- End Components Nav -->
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
-						class="bi bi-chevron-down ms-auto"></i>
-				</a>
+					</ul>
+				</li><!-- End Components Nav -->
 
-			</li><!-- End Tables Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-bar-chart"></i><span>Reportes</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-				<ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-					<li>
-						<a href="charts-chartjs.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-					<li>
-						<a href="charts-apexcharts.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-					<li>
-						<a href="charts-echarts.html">
-							<i class="bi bi-circle"></i><span></span>
-						</a>
-					</li>
-				</ul>
-			</li><!-- End Charts Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-					<i class="bi bi-gem"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
-				</a>
-
-			</li><!-- End Icons Nav -->
-
-			<li class="nav-heading">Admin</li>
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" th:href="@{/usuarios}">
-					<i class="bi bi-person"></i>
-					<span>Usuario</span>
-				</a>
-			</li><!-- End Profile Page Nav -->
-
-			<li class="nav-item">
-				<a class="nav-link collapsed" href="pages-faq.html">
-					<i class="bi bi-question-circle"></i>
-					<span>Configuracion</span>
-				</a>
-			</li><!-- End F.A.Q Page Nav -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#rentas-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-menu-button-wide"></i><span>Rentas</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="rentas-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a th:href="@{/rentas}">
+								<i class="bi bi-circle"></i><span>Rentas recientes</span>
+							</a>
+						</li>
 
 
+					</ul>
+				</li><!-- End Components Nav -->
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/inspecciones}">
+						<i class="bi bi-layout-text-window-reverse"></i><span>Inspecciones</span><i
+							class="bi bi-chevron-down ms-auto"></i>
+					</a>
 
-		</ul>
+				</li><!-- End Tables Nav -->
 
-	</aside><!-- End Sidebar-->
+				<li class="nav-item">
+					<a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+						<i class="bi bi-bar-chart"></i><span>Reportes</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+					<ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+						<li>
+							<a href="charts-chartjs.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+						<li>
+							<a href="charts-apexcharts.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+						<li>
+							<a href="charts-echarts.html">
+								<i class="bi bi-circle"></i><span></span>
+							</a>
+						</li>
+					</ul>
+				</li><!-- End Charts Nav -->
 
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/empleados}">
+						<i class="bi bi-gem"></i><span>Empleados</span><i class="bi bi-chevron-down ms-auto"></i>
+					</a>
+
+				</li><!-- End Icons Nav -->
+
+				<li class="nav-heading">Admin</li>
+
+				<li class="nav-item">
+					<a class="nav-link collapsed" th:href="@{/usuarios}">
+						<i class="bi bi-person"></i>
+						<span>Usuario</span>
+					</a>
+				</li><!-- End Profile Page Nav -->
+
+				<li class="nav-item">
+					<a class="nav-link collapsed" href="pages-faq.html">
+						<i class="bi bi-question-circle"></i>
+						<span>Configuracion</span>
+					</a>
+				</li><!-- End F.A.Q Page Nav -->
+
+
+
+			</ul>
+
+		</aside><!-- End Sidebar-->
 	<main id="main" class="main">
 
 		<div class="pagetitle">
@@ -415,7 +414,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 
-					<div class="card">
+					<div class="card" style="width: 83em;">
 						<div class="card-body">
 
 
@@ -425,13 +424,22 @@
 							<h5 class="card-title">Rentas</h5>
 
 							<!-- Table with stripped rows -->
-							<table class="table datatable">
+							<table class="table datatable" >
 								<thead>
 									<tr>
 										<th>
-											<b>Descripcion</b>
+											<b>No.Renta</b>
 										</th>
-										<th>Activo</th>
+										<th>Vehiculo</th>
+										<th>Cliente</th>
+										<th>Retiro</th>
+										<th>Devolucion</th>
+										<th>Monto x Dia</th>
+										<th>Dias</th>
+										<th>Comentarios</th>
+										<th>Estado</th>
+										<th>Entregado por</th>
+										
 
 
 										<th>Acciones</th>
@@ -439,8 +447,20 @@
 								</thead>
 								<tbody>
 									<tr th:each="renta:${rentas}">
-										<td th:text="${renta.descripcion}"></td>
-										<td th:text="${renta.activo}"></td>
+										<td th:text="${renta.noRenta}"></td>
+										<td th:if="${renta.vehiculo != null}" th:text="${renta.vehiculo.placa}"></td>
+										<td th:if="${renta.vehiculo == null}">N/A</td>
+										<td th:if="${renta.cliente != null}" th:text="${renta.cliente.nombre}"></td>
+										<td th:if="${renta.cliente.nombre == null }">N/A</td>
+										<td th:text="${#dates.format(renta.fechaRenta, 'dd/MM/yyyy')}"></td>									
+										<td th:text="${#dates.format(renta.fechaDevolucion, 'dd/MM/yyyy')}"></td>
+										<td th:text="${renta.montoPorDia}"></td>
+										<td th:text="${renta.cantidadDeDias}"></td>
+										<td th:text="${renta.comentarios}"></td>
+										<td th:text="${renta.estado}"></td>
+										<td th:if="${renta.empleado != null}"
+											th:text="${renta.empleado.nombre}"></td>
+										<td th:if="${renta.empleado.nombre == null }">N/A</td>
 
 										<td>
 											<div class="btn-group" role="group" aria-label="Third group">

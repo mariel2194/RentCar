@@ -27,40 +27,40 @@ import lombok.NoArgsConstructor;
 public class Rentas {
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int id;
+	    public int id;
 
 	    @Column
-	    private String noRenta;
+	    public String noRenta;
 
 	    @ManyToOne
 	    @JoinColumn(name="empleadoId")
-	    private Empleados empleado;
+	    public Empleados empleado;
 
 	    @ManyToOne
 	    @JoinColumn(name="vehiculoId")
-	    private Vehiculos vehiculo;
+	    public Vehiculos vehiculo;
 
 	    @ManyToOne
 	    @JoinColumn(name="clienteId")
-	    private Clientes cliente;
+	    public Clientes cliente;
 
 	    @Column
-	    private Date fechaRenta;
+	    public Date fechaRenta;
 
 	    @Column
-	    private Date fechaDevolucion;
+	    public Date fechaDevolucion;
 
 	    @Column
-	    private double montoPorDia;
+	    public double montoPorDia;
 
 	    @Column
-	    private int cantidadDeDias;
+	    public int cantidadDeDias;
 
 	    @Column
-	    private String comentarios;
+	    public String comentarios;
 
 	    @Column
-	    private boolean estado;
+	    public boolean estado;
 	
 
 }
