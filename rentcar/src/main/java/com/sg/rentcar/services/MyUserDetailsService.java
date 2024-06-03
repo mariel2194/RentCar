@@ -1,22 +1,27 @@
+
 package com.sg.rentcar.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
-import com.sg.rentcar.models.Users;
-import com.sg.rentcar.repositories.UsersRepository;
+import com.sg.rentcar.models.UserPrincipal;
+import com.sg.rentcar.models.User;
+import com.sg.rentcar.repositories.UserRepository;
 
+@Service
 public class MyUserDetailsService implements UserDetailsService {
-	
-	@Autowired UsersRepository usersRepository;
+
+	@Autowired
+	UserRepository usersRepository;
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		
-		Users user = usersRepository.findByUsername(username);
-		if(user == null) {
+
+		User user = usersRepository.findByUsername(username);
+		if (user == null) {
 			throw new UsernameNotFoundException("User not found!");
 		}
 		return new UserPrincipal(user);

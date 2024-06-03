@@ -29,7 +29,7 @@
   <!-- Template Main CSS File 
   <th data-type="date" data-format="YYYY/DD/MM">Start Date</th>
 -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin
@@ -66,7 +66,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" th:action="@{/login}" method="post">
 
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>

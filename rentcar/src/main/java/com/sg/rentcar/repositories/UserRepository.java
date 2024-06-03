@@ -1,11 +1,12 @@
+
 package com.sg.rentcar.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.sg.rentcar.models.Users;
+import com.sg.rentcar.models.User;
 
 @Repository
-public interface UsersRepository extends JpaRepository<Users, Integer> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 
-	Users findByUsername(String username);
+	User findByUsername(String username);
 }

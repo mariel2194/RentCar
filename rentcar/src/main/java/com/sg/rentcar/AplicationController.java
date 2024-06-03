@@ -8,22 +8,20 @@ public class AplicationController {
 
 	@GetMapping("/index")
 	public String goHome() {
-		
-	return "index";
+
+		return "index";
 	}
-	
+
 	@GetMapping("/login")
 	public String Login() {
-		
-	return "login";
-	}	
-	
+
+		return "login";
+	}
+
 	@GetMapping("/logout")
 	public String Logout() {
-		
-	return "logout";
+
+		return "logout";
 	}
-	
-	
-	
+
 }
