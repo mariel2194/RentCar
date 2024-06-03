@@ -10,6 +10,20 @@ public class AplicationController {
 	public String goHome() {
 		
 	return "index";
+	}
+	
+	@GetMapping("/login")
+	public String Login() {
+		
+	return "login";
 	}	
+	
+	@GetMapping("/logout")
+	public String Logout() {
+		
+	return "logout";
+	}
+	
+	
 	
 }
