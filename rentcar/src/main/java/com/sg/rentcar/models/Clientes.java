@@ -1,20 +1,10 @@
 package com.sg.rentcar.models;
-import java.util.Date;
 
-import javax.persistence.Entity;
-
-import org.springframework.format.annotation.DateTimeFormat;
+import jakarta.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,32 +13,29 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "clienteId")
 public class Clientes {
-	
-	
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    public int clienteId;
 
-	    @Column
-	    public String nombre;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int clienteId;
 
-	    @Column
-	    public String cedula;
+    @Column
+    private String nombre;
 
-	    @Column
-	    public String noTarjeta;
+    @Column
+    private String cedula;
 
-	    @Column
-	    public double limiteCredito;
+    @Column
+    private String noTarjeta;
 
-	    @Column
-	    public String tipoPersona;
+    @Column
+    private double limiteCredito;
 
-	    @Column
-	    public boolean activo;
-	
+    @Column
+    private String tipoPersona;
+
+    @Column
+    private boolean activo;
+
 }
-
-

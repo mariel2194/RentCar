@@ -1,18 +1,11 @@
 package com.sg.rentcar.models;
 
+import jakarta.persistence.*;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,47 +15,43 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-
 public class Rentas {
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    public int id;
 
-	    @Column
-	    public String noRenta;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	    @ManyToOne
-	    @JoinColumn(name="empleadoId")
-	    public Empleados empleado;
+    @Column
+    private String noRenta;
 
-	    @ManyToOne
-	    @JoinColumn(name="vehiculoId")
-	    public Vehiculos vehiculo;
+    @ManyToOne
+    @JoinColumn(name="empleadoId")
+    private Empleados empleado;
 
-	    @ManyToOne
-	    @JoinColumn(name="clienteId")
-	    public Clientes cliente;
+    @ManyToOne
+    @JoinColumn(name="vehiculoId")
+    private Vehiculos vehiculo;
 
-	    @Column
-	    public Date fechaRenta;
+    @ManyToOne
+    @JoinColumn(name="clienteId")
+    private Clientes cliente;
 
-	    @Column
-	    public Date fechaDevolucion;
+    @Column
+    private Date fechaRenta;
 
-	    @Column
-	    public double montoPorDia;
+    @Column
+    private Date fechaDevolucion;
 
-	    @Column
-	    public int cantidadDeDias;
+    @Column
+    private double montoPorDia;
 
-	    @Column
-	    public String comentarios;
+    @Column
+    private int cantidadDeDias;
 
-	    @Column
-	    public boolean estado;
-	
+    @Column
+    private String comentarios;
+
+    @Column
+    private boolean estado;
 
 }
-
-
-

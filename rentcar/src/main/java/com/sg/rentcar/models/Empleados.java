@@ -1,52 +1,43 @@
 package com.sg.rentcar.models;
 
-import java.util.Date;
+import jakarta.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-
-
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "empleadoId")
 public class Empleados {
-	
-	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    public int empleadoId;
 
-	    @Column
-	    public String nombre;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int empleadoId;
 
-	    @Column
-	    public String cedula;
+    @Column
+    private String nombre;
 
-	    @Column
-	    public String tandaLabor;
+    @Column
+    private String cedula;
 
-	    @Column
-	    public double porcientoComision;
+    @Column
+    private String tandaLabor;
 
-	    @Column
-	    public Date fechaIngreso;
+    @Column
+    private double porcientoComision;
 
-	    @Column
-	    public boolean activo;
-	
-	
-	
-	
+    @Column
+    private Date fechaIngreso;
+
+    @Column
+    private boolean activo;
 
 }

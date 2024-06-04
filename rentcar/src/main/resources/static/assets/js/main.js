@@ -281,28 +281,69 @@
   /**
    * Initiate Datatables
    */
-  const datatables = select('.datatable', true)
-  datatables.forEach(datatable => {
-    new simpleDatatables.DataTable(datatable, {
-      perPageSelect: [5, 10, 15, ["All", -1]],
-       scrollX: true,
-      columns: [{
-          select: 2,
-          sortSequence: ["desc", "asc"]
-        },
-        {
-          select: 3,
-          sortSequence: ["desc"]
-        },
-        {
-          select: 4,
-          cellClass: "green",
-          headerClass: "red"
+ const datatables = select('.datatable', true);
+datatables.forEach(datatable => {
+  new simpleDatatables.DataTable(datatable, {
+    perPageSelect: [5, 10, 15, ["All", -1]],
+    scrollX: true,
+    buttons: [
+      {
+        extend: 'csv',
+        text: 'Export CSV', // Text displayed on the button
+        className: 'btn btn-primary', // CSS class for styling the button
+        exportOptions: {
+          modifier: {
+            search: 'none'
+          }
         }
-      ]
-    });
-  }
-  )
+      },
+      {
+        extend: 'excel',
+        text: 'Export Excel',
+        className: 'btn btn-primary',
+        exportOptions: {
+          modifier: {
+            search: 'none'
+          }
+        }
+      },
+      {
+        extend: 'pdf',
+        text: 'Export PDF',
+        className: 'btn btn-primary',
+        exportOptions: {
+          modifier: {
+            search: 'none'
+          }
+        }
+      },
+      {
+        extend: 'print',
+        text: 'Print',
+        className: 'btn btn-primary',
+        exportOptions: {
+          modifier: {
+            search: 'none'
+          }
+        }
+      }
+    ],
+    columns: [{
+        select: 2,
+        sortSequence: ["desc", "asc"]
+      },
+      {
+        select: 3,
+        sortSequence: ["desc"]
+      },
+      {
+        select: 4,
+        cellClass: "green",
+        headerClass: "red"
+      }
+    ]
+  });
+});
 
   /**
    * Autoresize echart charts

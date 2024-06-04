@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.sg.rentcar.models.TipoVehiculos;
+import com.sg.rentcar.models.Vehiculos;
 import com.sg.rentcar.services.TipoVehiculoService;
 
 @Controller 
@@ -20,10 +21,9 @@ public class TipoVehiculoController {
     @GetMapping("/tipoVehiculos")
     public String goTipoVehiculos(Model model) {
     	
-    	List<TipoVehiculos>tipoVehiculosList = tipoVehiculoService.getTipoVehiculos();
-    	
-    	model.addAttribute("tipoVehiculos", tipoVehiculosList);
-    	
+    	List<TipoVehiculos>tipoVehiculos = tipoVehiculoService.getTipoVehiculos();    	
+    	model.addAttribute("tipoVehiculos", tipoVehiculos);
+    	System.out.println(model.asMap());
         return "tipoVehiculos"; 
     }
 

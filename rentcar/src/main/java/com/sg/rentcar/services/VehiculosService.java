@@ -15,10 +15,14 @@ public class VehiculosService {
 	private VehiculoRepository vehiculoRepository ; 
 	
 	
-	public List<Vehiculos> getVehiculos(){
-		
+	public List<Vehiculos> getVehiculos(){		
 		return vehiculoRepository.findAll();
 		
-	}
+	}	
+	
+	public void save(Vehiculos vehiculo) {
+		vehiculoRepository.save(vehiculo);    	
+    	    	
+    }
 
 }
